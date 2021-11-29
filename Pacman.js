@@ -50,6 +50,8 @@ class Pacman {
 
     if (e.keyCode >= 37 && e.keyCode <= 40) {
       dir = DIRECTIONS[e.key];
+      e.preventDefault();
+      e.stopPropagation();
     } else {
       return;
     }
